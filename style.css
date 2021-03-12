@@ -1,0 +1,67 @@
+*,
+* {
+  box-sizing: border-box;
+  /* background-color: rgb(64, 126, 177); */
+  margin: 0;
+  padding: 0;
+  font-size: 50;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+h1 {
+    font-size: 50;
+    color:rgb(64, 126, 177);
+    margin-bottom: 5rem;
+}
+
+
+h1 {
+    font-size: 50;
+    margin-bottom: 4rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100vm;
+    height: 100vh;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+/*"play" and "high scores" button features*/
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(64, 126, 177);
+    background: linear-gradient(90deg, rgb(233, 212, 173) 0%, rgb(233, 212, 173) 100%);
+    cursor: pointer;
+}
+
