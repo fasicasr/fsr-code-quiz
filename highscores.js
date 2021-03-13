@@ -6,7 +6,7 @@ let goBack = document.querySelector("#goBack");
 let highScores = localStorage.getItem ('highScores')
 highScores = JSON.parse(highScores)
 
-listHighscores.text = highScores
+listHighscores.value =  JSON.stringify(highScores)
 
 
 
