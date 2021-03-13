@@ -7,9 +7,11 @@ const progressBarFull = document.querySelector('#progressBarFull');
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0
+let time = 75
 let questionCounter = 0
 let availableQuestions = [];
 let questionsIndex = 0
+let timeleft = 75;
 
 let questions = [
   {
@@ -55,7 +57,8 @@ let questions = [
 ]
 //fixed numbers. Score points and number of questions won't change 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+const MAX_QUESTIONS = 5
+const TIME_POINTS = 1
 //Function to start the quiz
 startQuiz = () => {
     questionCounter = 0
@@ -67,23 +70,9 @@ startQuiz = () => {
 
 //calling new question 
 getNewQuestion = () => {
-  if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-    localStorage.setItem('mostRecentScore', score)
-    alert(score)
-    //keeps track of the score
-    return window.location.assign("end.html")
-  }
-  //issue with this 
-  questionCounter++
+  
   progressText.innerText = 'Question'
-  // progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
-  progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) * 100}%'
-  //how to calculate the value of the question index
-  // const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-  //loops through questions
-  if (questionsIndex > 4){
-    questionsIndex = 0
-  }
+ 
   currentQuestion = availableQuestions[questionsIndex++] //keep track of question user is on
   question.innerText = currentQuestion.question 
 
@@ -95,6 +84,12 @@ getNewQuestion = () => {
   availableQuestions.splice[questionsIndex, 1]
 
   acceptingAnswers = true
+
+  if(availableQuestions.length === 0 || questionsIndex + 1 > MAX_QUESTIONS || timeleft <= 0) {
+    localStorage.setItem('mostRecentScore', timeleft)
+    //keeps track of the score
+    return window.location.assign("end.html")
+  }
 }
 
 choices.forEach(choice => {
@@ -108,27 +103,33 @@ choices.forEach(choice => {
       let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' //toggle the corret css color
      //add correct and wrong alerts
       if(classToApply === 'correct'){
-          incrementScore(SCORE_POINTS)//if user get questin correct, score will increase in points
+          // decrementScore(TIME_POINTS)
       }else {
         alert('wrong!')
+        timeleft = timeleft - 20 
+        
+        // decrementScore(TIME_POINTS + 19)
       }
       
-      // selectedChoice.parentElement.classList.add(classToApply)
+      
     //shows the user time 
     getNewQuestion()
-    // setTimeout(() =>{
-    //     selectedChoice.parentElement.classList.remove(classToApply)
-    //     getNewQuestion()
-
-    //   },1000)
+    
     })
  
 })
 
-incrementScore = num => {
-  score +=num
-  scoreText.innerText = score
-}
+    let downloadTimer = setInterval(function(){
+    timeleft--;
+    scoreText.innerText = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
+
+// decrementScore = num => {
+//   time -=num
+//   scoreText.innerText = time
+// }
 
 startQuiz()
 
