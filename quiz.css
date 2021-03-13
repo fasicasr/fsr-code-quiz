@@ -9,30 +9,23 @@ body {
     border-radius: 4px;
     background-color:  rgb(233, 212, 173);
     font-size: 3rem;
-    min-width: 80rem;
+    min-width: 40rem;
     cursor: pointer;
 }
 
 h1 {
     color:  rgb(64, 126, 177); 
 }
-/*a,b,c,d  content */
+
 .choice-prefix {
     padding: 2rem 2.5rem;
     color:  rgb(64, 126, 177);
 }
 
 .choice.text {
-    padding: 10rem;
+    padding: 100rem;
     width: 100%;
-}
 
-.correct {
-    background: linear-gradient(32deg, rgba(11, 223, 36) 0% rgb(41, 232, 111) 100%);
-}
-
-.incorrect {
-    background: linear-gradient(32deg, rgb(223, 43, 11) 0% rgb(232, 111, 41) 100%);
 }
 
 #hud {
@@ -41,30 +34,13 @@ h1 {
 }
 
 .hud-prefix {
-    text-align: center;
     font-size: 2rem;
+    margin-left: 208px;
 }
 
 .hud-main-text {
-    text-align: center;
+    text-align: end;
 }
-
-/*red bar top of the screen tells you your progress*/
-#progressBar {
-    width: 20rem;
-    height: 3rem;
-    border: 0.2rem solid rgb(232, 41, 41);
-    margin-top: 2rem;
-    border-radius: 50px;
-    overflow: hidden;
-}
-
-#progressBarFull {
-    height: 100%;
-    background: rgb(232, 41, 41);
-    width: 0%;
-}
-
 
 
 

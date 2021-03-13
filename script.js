@@ -15,44 +15,44 @@ let timeleft = 75;
 
 let questions = [
   {
-    question: 'what is 1 + 1?',
-    choice1: '2',
-    choice2: '4',
-    choice3: '21',
-    choice4: '17',
-    answer: 1,
+    question: 'Commonly used data types DO NOT include:',
+    choice1: 'strings',
+    choice2: 'booleans',
+    choice3: 'alerts',
+    choice4: 'numbers',
+    answer: 3,
   },
   {
-    question: 'what is 2 + 2?',
-    choice1: '2',
-    choice2: '4',
-    choice3: '21',
-    choice4: '17',
+    question: 'The condition in an if/else statment is enclosed within__',
+    choice1: 'quotes',
+    choice2: 'parentheses',
+    choice3: 'curly brackets',
+    choice4: 'squre brackets',
     answer: 2,
   },
   {
-    question: 'what is 3 + 3?',
-    choice1: '6',
-    choice2: '4',
-    choice3: '21',
-    choice4: '17',
-    answer: 1,
+    question: 'Arrays in JavaScript can be used to store__',
+    choice1: 'numbers and strings',
+    choice2: 'other arrays',
+    choice3: 'booleans',
+    choice4: 'all of the aboce',
+    answer: 4,
   },
   {
-    question: 'what is 4 + 4?',
-    choice1: '2',
-    choice2: '10',
-    choice3: '8',
-    choice4: '17',
-    answer: 3,
+    question: 'String values must be enclosed within ___ when being assigned to variables',
+    choice1: 'commas',
+    choice2: 'curly brackets',
+    choice3: 'quotes',
+    choice4: 'parentheses',
+    answer: 2,
   }, 
   {
-    question: 'what is 5 + 5?',
-    choice1: '2',
-    choice2: '3',
-    choice3: '8',
-    choice4: '10',
-    answer: 4,
+    question: 'A very useful tool used during development and debugging for printing content to the debugger is:',
+    choice1: 'console.log',
+    choice2: 'for loops',
+    choice3: 'terminal/bash',
+    choice4: 'javaScript',
+    answer: 1,
   },     
 ]
 //fixed numbers. Score points and number of questions won't change 
@@ -101,23 +101,25 @@ choices.forEach(choice => {
       const selectedAnswer = selectedChoice.dataset['number']//choices 1-4
 
       let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' //toggle the corret css color
-     //add correct and wrong alerts
+    //  //add correct and wrong alerts
       if(classToApply === 'correct'){
-          // decrementScore(TIME_POINTS)
+      
       }else {
         alert('wrong!')
         timeleft = timeleft - 20 
         
-        // decrementScore(TIME_POINTS + 19)
+     
       }
       
       
-    //shows the user time 
+   
     getNewQuestion()
     
     })
  
 })
+
+
 
     let downloadTimer = setInterval(function(){
     timeleft--;
@@ -126,10 +128,6 @@ choices.forEach(choice => {
         clearInterval(downloadTimer);
     },1000);
 
-// decrementScore = num => {
-//   time -=num
-//   scoreText.innerText = time
-// }
 
 startQuiz()
 

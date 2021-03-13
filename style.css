@@ -20,6 +20,10 @@ h1 {
     margin-bottom: 4rem;
 }
 
+h2 {
+    color:rgb(64, 126, 177);
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -29,6 +33,11 @@ h1 {
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
+}
+
+.choice-text {
+    padding: 30px;
+    margin-left: -54px;
 }
 
 .flex-column {
@@ -52,7 +61,7 @@ h1 {
 .hidden {
     display: none;
 }
-/*"play" and "high scores" button features*/
+
 .btn {
     font-size: 2.4rem;
     padding: 2rem 0;
@@ -61,8 +70,11 @@ h1 {
     margin-bottom: 1rem;
     text-decoration: none;
     color: rgb(64, 126, 177);
-    background: linear-gradient(90deg, rgb(233, 212, 173) 0%, rgb(233, 212, 173) 100%);
+    background:  rgb(233, 212, 173);
     cursor: pointer;
+    /* position: absolute;
+    top: 50%;
+    left: %; */
 }
 
 /*End page css*/
@@ -90,12 +102,14 @@ input::placeholder {
     margin-bottom: 3rem;
     width: 100%;
     outline: none;
+    text-align: center;
 }
 
 #end-text {
-    font-size: 2.4;
-    color: green;
+    font-size:  36.4px;
+    color:rgb(64, 126, 177);
     text-align: center;
+    padding: 100px;
 }
 
 #saveScoreBtn {
