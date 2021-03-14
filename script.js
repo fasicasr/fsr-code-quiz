@@ -100,26 +100,27 @@ choices.forEach(choice => {
       const selectedChoice = e.target
       const selectedAnswer = selectedChoice.dataset['number']//choices 1-4
 
-      let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' //toggle the corret css color
+      let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' 
     //  //add correct and wrong alerts
       if(classToApply === 'correct'){
       
       }else {
         alert('wrong!')
-        timeleft = timeleft - 20 
-        
+        if (timeleft < 20) {
+          timeleft = 0
+        }
+        else {
+          timeleft = timeleft - 20 
+        }
      
       }
-      
-      
+       
    
     getNewQuestion()
     
     })
  
 })
-
-
 
     let downloadTimer = setInterval(function(){
     timeleft--;

@@ -10,21 +10,12 @@ if (highScores) {
 for(let i = 0; i < highScores.length; i++) {
     let score = document.querySelector('#score' + (i + 1))
     score.innerText = highScores[i].name+highScores[i].score
-    // alert(highScores[i].name)
 }
 }
 clear.addEventListener("click", function () {
     localStorage.setItem('highScores', null)
     window.location.replace('highScores.html')
 });
-
-// clear.addEventListener('click', highScores) {
-//     localStorage.clear();
-//     // location.reload();
-// };
-
-// localStorage.setItem = finalScores, null
-
 
 //event listener to move to homepage
 goBack.addEventListener("click", function () {

@@ -12,6 +12,7 @@ h1 {
     font-size: 50;
     color:rgb(64, 126, 177);
     margin-bottom: 5rem;
+    margin-left: 94px;
 }
 
 
@@ -22,6 +23,7 @@ h1 {
 
 h2 {
     color:rgb(64, 126, 177);
+    margin-left: 94px;
 }
 
 .container {
@@ -62,6 +64,11 @@ h2 {
     display: none;
 }
 
+#saveScoreBtn {
+    border: none;
+    margin-left: 401px;
+}
+
 .btn {
     font-size: 2.4rem;
     padding: 2rem 0;
@@ -72,9 +79,7 @@ h2 {
     color: rgb(64, 126, 177);
     background:  rgb(233, 212, 173);
     cursor: pointer;
-    /* position: absolute;
-    top: 50%;
-    left: %; */
+    margin-left: 94px;
 }
 
 /*End page css*/
@@ -111,8 +116,17 @@ input::placeholder {
     text-align: center;
     padding: 100px;
 }
+ .scorelist {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 26%;
+    background-color: rgb(233, 212, 173);
+    color: rgb(64, 126, 177);
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 440px;
+    
 
-#saveScoreBtn {
-    border: none;
-}
+} 
+
 
