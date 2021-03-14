@@ -26,6 +26,10 @@ h2 {
     margin-left: 94px;
 }
 
+#question {
+    margin-right: 74px;
+}
+
 .container {
     display: flex;
     justify-content: center;

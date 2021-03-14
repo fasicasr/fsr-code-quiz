@@ -15,7 +15,13 @@ Users can brush up on their coing knowledge by taking this quiz. The quiz consis
 # Webpage Demo
 
 * FSR CODE QUIZ Demo 
-<!-- ![webpage image](./Assets/spg-webpage-screenshot.png) -->
+![webpage image](./images/homepage.png)
+
+![webpage image](./images/quizpage.png)
+
+![webpage image](./images/savescorepage.png)
+
+![webpage image](./images/highscorepage.png)
 
 
 # Webpage 
