@@ -105,9 +105,12 @@ input::placeholder {
 
 #username {
     margin-bottom: 3rem;
-    width: 100%;
+    width: 37%;
     outline: none;
     text-align: center;
+    margin-left: 394px;
+    border: dotted;
+    color: burlywood;
 }
 
 #end-text {

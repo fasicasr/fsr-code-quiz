@@ -73,7 +73,12 @@ getNewQuestion = () => {
   
   progressText.innerText = 'Question'
  
-  currentQuestion = availableQuestions[questionsIndex++] //keep track of question user is on
+  if(availableQuestions.length === 0 || questionsIndex > (MAX_QUESTIONS -1) || timeleft <= 0) {
+    localStorage.setItem('mostRecentScore', timeleft)
+    //keeps track of the score
+    return window.location.assign("end.html")
+  }
+  currentQuestion = availableQuestions[questionsIndex] //keep track of question user is on
   question.innerText = currentQuestion.question 
 
   choices.forEach(choice => {
@@ -85,11 +90,9 @@ getNewQuestion = () => {
 
   acceptingAnswers = true
 
-  if(availableQuestions.length === 0 || questionsIndex + 1 > MAX_QUESTIONS || timeleft <= 0) {
-    localStorage.setItem('mostRecentScore', timeleft)
-    //keeps track of the score
-    return window.location.assign("end.html")
-  }
+ 
+  questionsIndex++
+
 }
 
 choices.forEach(choice => {

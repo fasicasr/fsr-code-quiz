@@ -9,7 +9,7 @@ highScores = JSON.parse(highScores)
 if (highScores) {
 for(let i = 0; i < highScores.length; i++) {
     let score = document.querySelector('#score' + (i + 1))
-    score.innerText = highScores[i].name+highScores[i].score
+    score.innerText = highScores[i].name +' - '+ highScores[i].score
 }
 }
 clear.addEventListener("click", function () {
